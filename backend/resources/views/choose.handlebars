@@ -1,0 +1,26 @@
+        {{#each courses}}
+         <div class="chon-ve">
+            <div class="logo-hang-bay">
+              <img
+                src="{{this.logohhk}}"
+                alt=""
+              />
+            </div>
+            <div class="ma-chuyen-bay">{{this.mave}}</div>
+
+            <div class="khoi-hanh-tu">{{this.noixp}}</div>
+            <img
+              width="24"
+              height="24"
+              src="{{this.logomb}}"
+              alt="airplane-mode-on"
+            />
+            <div class="ket-thuc-o">{{this.noihc}}</div>
+            <div class="thoi-gian-chuyen-bay">{{this.tgbay}}</div>
+            <div class="gia-tien-chuyen-bay">{{this.giave}}</div>
+
+            <a href="./ticket/{{this.slug}}"
+              ><button class="btn-chon-ve">Chọn vé</button></a
+            >
+          </div>
+          {{/each}}

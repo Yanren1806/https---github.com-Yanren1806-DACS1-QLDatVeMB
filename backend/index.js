@@ -10,7 +10,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const db = require('./app/config/db');
 const course = require('./app/controllers/SiteControler');
-const route = require('./route/index')
+const route = require('./route/index');
 
 // Sử dụng CORS và Body-Parser middleware
 app.use(cors());

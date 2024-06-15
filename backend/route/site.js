@@ -4,6 +4,6 @@ const siteController = require('../app/controllers/SiteControler');
 
 
 // router.use('/dangki/:slug', newsController.show)
-router.get('/', siteController.home)
+router.get('/', siteController.choose)
 
 module.exports = router;
