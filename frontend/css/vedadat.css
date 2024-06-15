@@ -1,0 +1,44 @@
+.chon-ve {
+  display: flex;
+  margin: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px black solid;
+}
+.chon-ve button {
+  border: none;
+  margin: 10px;
+  padding: 10px 90px;
+  border-radius: 8px;
+}
+.btn-chon-ve:hover {
+  cursor: pointer;
+  background-color: #d00606;
+  font-weight: 600;
+}
+.main-ve-da-dat {
+  top: 100%;
+}
+.main-ve-da-dat {
+  height: 500px;
+}
+.gia-tien-chuyen-bay {
+  color: rgb(225, 89, 89);
+  font-weight: 600;
+}
+.time-chuyen-bay {
+  color: rgb(77, 49, 156);
+  font-weight: 600;
+}
+.thoi-gian-chuyen-bay {
+  color: rgb(77, 49, 156);
+  font-weight: 600;
+}
+.ma-chuyen-bay {
+  color: rgb(225, 89, 89);
+  font-weight: 600;
+}
+.modal-footer button {
+  padding: 5px 10px;
+  margin: 0 5px;
+}

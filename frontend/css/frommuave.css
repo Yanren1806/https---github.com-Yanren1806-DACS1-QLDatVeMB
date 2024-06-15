@@ -1,0 +1,215 @@
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.logo-login-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.095) 100%
+  );
+  height: 80px;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+.logo img {
+  width: 200px;
+  height: 70 px;
+}
+.login button {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.login button:hover {
+  background: #000;
+  color: aliceblue;
+}
+/* MENU */
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+.nav-menu a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.3s ease;
+  color: #000;
+}
+.nav-menu a:hover {
+  background: #fdfcfc;
+  color: rgb(59, 37, 121);
+  border-radius: 10px;
+}
+
+.option1 {
+  display: flex;
+}
+/* .option{
+      background: #000;
+      margin-top: 500px;
+  } */
+.Mota img {
+  width: 50px;
+}
+li {
+  list-style-type: none;
+}
+.Mota ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  margin: 30px;
+}
+.Mota ul li {
+  text-align: center;
+}
+/* item picture */
+.img1 {
+  height: 70px;
+}
+.img2 {
+  height: 46px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer a h5 {
+  text-decoration: none;
+}
+
+footer p:hover {
+  text-decoration: underline;
+}
+footer span {
+  color: orange;
+  font-size: 19px;
+  font-weight: 800;
+}
+.nav-link img {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+.from1 {
+  display: flex;
+}
+.main-mua-ve {
+  padding: 100px;
+  height: 900px;
+}
+.thong-tin-kh {
+  background-color: rgb(217, 215, 215);
+  padding: 20px;
+}
+.form-gioi-tinh {
+  width: 150px;
+  height: 50px;
+}
+.form-Hanh-Ly {
+  width: 150px;
+  height: 50px;
+}
+.ttkh {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.thong-tin-lien-he {
+  display: flex;
+  justify-content: center;
+}
+.thong-tin-lien-he input {
+  color: RED;
+  margin: 10px;
+}
+.btn-datve button.btn-xac-nhan-ve {
+  width: 200px;
+}
+
+/* thong-tin-diem-di-va-den */
+.thong-tin-diem-di-va-den {
+  display: flex;
+  justify-content: space-around;
+}
+.thong-tin-ngay-den,
+.thong-tin-ngay-di {
+  width: 450px;
+}
+/* bay den */
+.thong-tin-hang-bay-di {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.thong-tin-hang-bay-di img {
+  width: 180px;
+}
+.img-diem-di span {
+  color: blue;
+  margin-left: 10px;
+}
+.thoi-gian-di-va-den {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.ten-diem-di-va-den {
+  text-align: center;
+}
+/* bay di */
+.thong-tin-hang-bay-den {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.thong-tin-hang-bay-den img {
+  width: 180px;
+}
+.img-diem-den span {
+  color: blue;
+  margin-left: 10px;
+}
+.size-nguoi-va-gia-tien {
+  display: flex;
+  justify-content: space-between;
+}
+.thong-tin-ngay-di::before {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  height: 210px;
+  background: #828282;
+  top: 28%;
+  right: 50%;
+  transform: translate(-28%, -50%);
+}
+.tong-tien {
+  display: flex;
+  justify-content: right;
+}
+.gia-tien {
+  margin: 0 20px;
+  color: #f79321;
+}
+.tong-tien span {
+  font-weight: 600;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+<body>
+    <header>
+        <nav class="logo-login-menu">
+            <div class="logo">
+                <a href="./home"><img src="../image/Remove-bg.ai_1715623620640.png" alt=""></a>
+            </div>
+            <div class="nav-menu">
+                <div><a href="./home">Trang Chủ</a></div>
+                <div><a href="#">Dịch Vụ Chuyến Bay</a></div>
+                <div><a href="./book">Vé Máy Bay</a></div>
+            </div>
+            <div class="login">
+                <a href="./login"><button class="btn-sign-up">Đăng Nhập</button></a>
+                <a href="./signup"><button class="btn-sign-up">Đăng Ký</button></a>
+            </div>
+        </nav>
+    </header>
+    <nav class="sign-up">
+        <div class="form-container">
+            <p class="title">Đăng ký tài khoản</p>
+            <form class="form" id="signup-form">
+                <input type="text" class="input" id="full-name" placeholder="Họ Tên" required>
+                <input type="email" class="input" id="email" placeholder="Email" required>
+                <input type="password" class="input" id="password" placeholder="Mật khẩu" required>
+                <button type="submit" class="form-btn">Đăng ký</button>
+            </form>
+        </div>
+    </nav>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('./auth/signout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username: `${fullName}`, email, password })
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert('Đăng ký thành công!');
+                window.location.href = './login';
+            } else {
+                alert(`Lỗi: ${result.error}`);
+            }
+        });
+    </script>
+</body>
+</html>

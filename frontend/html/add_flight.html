@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+    <title>Thêm vé mới</title>
+</head>
+<body>
+  <header>
+    <nav class="logo-login-menu">
+        <div class="logo">
+            <a href="../home">
+                <img src="../image/Remove-bg.ai_1715623620640.png" alt="">
+            </a>
+        </div>
+        <div class="nav-menu">
+            <div><a href="../home">Trang Chủ</a></div>
+            <div><a href="#">Dịch Vụ Chuyến Bay</a></div>
+            <div><a href="../book">Vé Máy Bay</a></div>
+            <div><a href="../booked">Vé Đã Đặt</a></div>
+        </div>
+        <div class="login">
+            <a href="../login">
+                <button class="btn-login">Đăng Nhập</button>
+            </a>
+            <a href="../signout">
+                <button class="btn-login">Đăng Ký</button>
+            </a>
+        </div>
+    </nav>
+</header>
+    <h1>Thêm vé mới</h1>
+    <form id="add-flight-form">
+        <label for="MAFLIGHT">Mã chuyến bay:</label>
+        <input type="number" id="MAFLIGHT" name="MAFLIGHT" required><br>
+
+        <label for="TENFLIGHT">Tên chuyến bay:</label>
+        <input type="text" id="TENFLIGHT" name="TENFLIGHT" required><br>
+
+        <label for="TenHangHangKhong">Tên hãng hàng không:</label>
+        <input type="text" id="TenHangHangKhong" name="TenHangHangKhong" required><br>
+
+        <label for="TGXUATPHAT">Thời gian xuất phát:</label>
+        <input type="datetime-local" id="TGXUATPHAT" name="TGXUATPHAT" required><br>
+
+        <label for="TGKETTHUC">Thời gian kết thúc:</label>
+        <input type="datetime-local" id="TGKETTHUC" name="TGKETTHUC" required><br>
+
+        <label for="NOIXUATPHAT">Nơi xuất phát:</label>
+        <input type="text" id="NOIXUATPHAT" name="NOIXUATPHAT" required><br>
+
+        <label for="NOIHACANH">Nơi hạ cánh:</label>
+        <input type="text" id="NOIHACANH" name="NOIHACANH" required><br>
+
+        <button type="submit">Thêm vé</button>
+    </form>
+
+    <script>
+        document.getElementById('add-flight-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const MAFLIGHT = document.getElementById('MAFLIGHT').value;
+            const TENFLIGHT = document.getElementById('TENFLIGHT').value;
+            const TenHangHangKhong = document.getElementById('TenHangHangKhong').value;
+            const TGXUATPHAT = document.getElementById('TGXUATPHAT').value;
+            const TGKETTHUC = document.getElementById('TGKETTHUC').value;
+            const NOIXUATPHAT = document.getElementById('NOIXUATPHAT').value;
+            const NOIHACANH = document.getElementById('NOIHACANH').value;
+
+            try {
+                const response = await fetch('/book', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ MAFLIGHT, TENFLIGHT, TenHangHangKhong, TGXUATPHAT, TGKETTHUC, NOIXUATPHAT, NOIHACANH })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to add flight');
+                }
+
+                alert('Flight added successfully');
+                window.location.href = 'book.html';
+            } catch (error) {
+                console.error('Error adding flight:', error);
+                alert('Error adding flight');
+            }
+        });
+    </script>
+</body>
+</html>
