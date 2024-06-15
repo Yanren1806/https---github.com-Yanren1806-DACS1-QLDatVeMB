@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yanren1806/dacs.git"
+    "url": "git+https://github.com/Yanren1806/DACoSo-master.git"
   },
   "author": "NhanDuong",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yanren1806/dacs/issues"
+    "url": "https://github.com/Yanren1806/DACoSo-master/issues"
   },
-  "homepage": "https://github.com/Yanren1806/dacs#readme",
+  "homepage": "https://github.com/Yanren1806/DACoSo-master#readme",
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
