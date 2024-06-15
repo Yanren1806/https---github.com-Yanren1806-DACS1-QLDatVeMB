@@ -1,12 +1,11 @@
 const newsRouter = require('./new');
 const sitesRouter = require('./site');
-
 const SiteControler = require("../app/controllers/SiteControler");
 const newsControler = require("../app/controllers/NewsController");
 
 function route(app) {
 
-        // app.use('/home', siteRouter);
+    app.use('/home', sitesRouter);
 
     app.use('/dangki', newsRouter);
 
