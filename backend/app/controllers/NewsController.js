@@ -1,7 +1,7 @@
 class NewsController {
 
     index(req, res) {
-        res.render('dangki');
+        res.render('dangki.handlebars')
     }
 
     // show(req, res) {
