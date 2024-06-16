@@ -1,4 +1,5 @@
 const newsRouter = require('./new');
+const meRouter = require('./me');
 const sitesRouter = require('./site');
 const coursesRouter = require('./course');
 const SiteControler = require("../app/controllers/SiteControler");
@@ -8,6 +9,8 @@ const coursesControler = require("../app/controllers/CourseControllers");
 function route(app) {
 
     app.use('/choose', sitesRouter);
+
+    app.use('/me', meRouter);
 
     app.use('/ticket', coursesRouter);
 

@@ -1,0 +1,28 @@
+<h3>Ve may bay da them vao</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tuyen bay</th>
+      <th scope="col">chuyen bay</th>
+      <th scope="col">gia</th>
+      <th scope="col">ngay dang</th>
+    </tr>
+  </thead>
+  {{#each courses}}
+  <tbody>
+    <tr>
+      <th scope="row">{{sum @index 1}}</th>
+      <td>{{this.noixp}} - {{this.noihc}}</td>
+      <td>{{this.tgxp}} - {{this.tghc}}</td>
+      <td>{{this.giave}}</td>
+      <td>{{this.createdAt}}</td>
+      <td>
+        <button href="" class="btn btn-link">sua</button>
+      <button href="" class="btn btn-link">xoa</button>
+      </td>
+    </tr>
+  </tbody>
+  {{/each}}
+</table>

@@ -28,6 +28,7 @@
     "exxpress": "^1.0.0",
     "handlebar": "^1.0.0",
     "mongoose": "^8.4.1",
+    "mongoose-slug-updater": "^3.3.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.3",
     "path": "^0.12.7"

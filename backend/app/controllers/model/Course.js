@@ -1,15 +1,22 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const slug = require('mongoose-slug-updater'); // Plugin để tạo slug
 
-const Course = new Schema({
-    logohanghangkhong: { type: String, maxLeng:255 },
-    mave: { type: String, maxLenght:255},
-    noixp: { type: String, maxLenght:255},
-    logomb: { type: String, maxLenght:255},
-    noihc: { type: String, maxLenght:255},
-    tgxp: { type: String, maxLenght:255},
-    tghc: { type: String, maxLenght:255},
-    giave: { type: String, maxLenght:255},
-  });
+mongoose.plugin(slug);
 
-  module.exports = mongoose.model('Course', Course)
+const CourseSchema = new Schema({
+    logohhk: { type: String, maxLength: 255 },
+    mave: { type: String, maxLength: 255 },
+    noixp: { type: String, maxLength: 255 },
+    logomb: { type: String, maxLength: 255 },
+    noihc: { type: String, maxLength: 255 },
+    tgxp: { type: String, maxLength: 255 },
+    tghc: { type: String, maxLength: 255 },
+    giave: { type: String, maxLength: 255 },
+    createdAt: { type: Date, default: Date.now},
+    slug: { type: String, slug: ['noixp', 'noihc', 'tgxp', 'tghc'], unique: true }
+});
+
+const Course = mongoose.model('Course', CourseSchema);
+
+module.exports = Course;
