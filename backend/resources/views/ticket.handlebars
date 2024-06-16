@@ -1,0 +1,255 @@
+<main class="main-mua-ve container">
+      <div class="thong-tin-diem-di-va-den">
+        <!-- THong tinh ngay di ngay den -->
+        <!-- bay khu hoi -->
+        <!-- ngay di -->
+        <div class="thong-tin-ngay-di">
+          <div class="thong-tin-hang-bay-di">
+            <div class="img-diem-di">
+              <img
+                src="https://res.ivivu.com/flight/inbound/images/home/flight/brands/compact/VietnamAirlines.webp"
+                alt=""
+              />
+              <span class="span-hang-bay-di">Vietnam Airlines</span>
+            </div>
+            <div><span class="span-mamb-di"> VN 220</span></div>
+          </div>
+          <br />
+          <div class="thoi-gian-di-va-den">
+            <div class="span-thoi-gian-di">
+              <div>{{courses.tgbay}}</div>
+              <span>{{courses.noixp}}</span>
+            </div>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaElEQVR4nO2VwQmAMBAE52zBPpXYiiEPLTYSOMFPfllUuIV8d46BsPByZmX5ClRgB0wBSA5orygg5tffkBOYAtKLha5P6ioPyKYGJKWiY6Qii/Kelqx0nn9Zjn+eqhycRT2ZLdLRH5ILkEo80v91Ya4AAAAASUVORK5CYII="
+            />
+            <div class="span-thoi-gian-den">
+              <div>22:15</div>
+              <span>HA NOI (HN)</span>
+            </div>
+          </div>
+          <div class="ten-diem-di-va-den"></div>
+          <br />
+          <p style="color: #828282">Chi phí</p>
+          <div class="size-nguoi-va-gia-tien">
+            <span>Người lớn</span>
+            <span>1</span><span>X</span><span>3.182.000</span>
+          </div>
+        </div>
+        <!-- ngay ve -->
+        <div class="thong-tin-ngay-den">
+          <div class="thong-tin-hang-bay-den">
+            <div class="img-diem-den">
+              <img
+                src="https://res.ivivu.com/flight/inbound/images/home/flight/brands/compact/VietnamAirlines.webp"
+                alt=""
+              />
+
+              <span class="span-hang-bay">VietNam Alines</span>
+            </div>
+
+            <div>
+              <span class="span-mamb-den"> VN 220</span>
+            </div>
+          </div>
+          <br />
+          <div class="thoi-gian-di-va-den">
+            <div class="span-thoi-gian-di">
+              <div>20:00</div>
+              <span>HO CHI MINH (SGN)</span>
+            </div>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaElEQVR4nO2VwQmAMBAE52zBPpXYiiEPLTYSOMFPfllUuIV8d46BsPByZmX5ClRgB0wBSA5orygg5tffkBOYAtKLha5P6ioPyKYGJKWiY6Qii/Kelqx0nn9Zjn+eqhycRT2ZLdLRH5ILkEo80v91Ya4AAAAASUVORK5CYII="
+            />
+            <div class="ten-diem-di-va-den">
+              <div>22:15</div>
+              <span>HA NOI (HN)</span>
+            </div>
+          </div>
+
+          <br />
+          <p style="color: #828282">Chi phí</p>
+          <div class="size-nguoi-va-gia-tien">
+            <span>Người lớn</span><span>1</span><span>X</span
+            ><span>3.182.000</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="tong-tien">
+        <span>Tổng tiền:</span>
+        <h5 class="gia-tien">4.777.000</h5>
+      </div>
+      <br />
+
+      <!-- thong tin kh -->
+      <form>
+        <div class="thong-tin-kh">
+          <div>
+            <h4>Thông tin hành khách</h4>
+            <div class="ttkh">
+              <select class="form-gioi-tinh">
+                <option>Giới tính</option>
+                <option>Nam</option>
+                <option>Nữ</option>
+              </select>
+              <input
+                type="Text "
+                style="width: 450px; height: 50px"
+                placeholder="Họ Và Tên"
+              />
+              <select class="form-Hanh-Ly">
+                <option>Mua 20kg - 230,000</option>
+                <option>Mua 30kg - 330,000</option>
+                <option>Mua 40kg - 430,000</option>
+                <option>Mua 50kg - 530,000</option>
+              </select>
+            </div>
+
+            <p>
+              Hành lý mỗi khách: 01 kiện chính (kích thước tối đa 56x36x23cm)
+              và/hoặc 01 túi xách nhỏ (kích thước tối đa 40x30x10), tổng trọng
+              lượng không vượt quá 07kg
+            </p>
+            <hr style="height: 5px" />
+          </div>
+          <h4>Thông tin liên hệ</h4>
+          <div class="thong-tin-lien-he">
+            <input type="Text" placeholder="Họ tên người liên hệ" />
+            <input type="Text" placeholder="Số điện thoại" />
+            <input type="Text" placeholder="Email" />
+          </div>
+          <div class="btn-datve">
+            <div class="mt-3">
+              <button
+                type="button"
+                class="btn btn-danger btn-xac-nhan-ve"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+              >
+                Đặt vé
+              </button>
+            </div>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Thông báo</h4>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                    ></button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">Vé đã được đặt thành công!</div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      data-bs-dismiss="modal"
+                    >
+                      Đóng
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success btn-sm"
+                      data-bs-dismiss="modal"
+                    >
+                      Xác nhận
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form class="diem-di-diem-den"></form>
+
+      <h5>QUY ĐỊNH VỀ GIẤY TỜ TÙY THÂN</h5>
+      <p>
+        - Hành khách từ đủ 14 tuổi: CMND còn hạn không quá 15 năm hoặc CCCD,
+        bằng lái xe, hộ chiếu còn hạn <br />
+        - Hành khách dưới 14 tuổi: Giấy khai sinh bản gốc hoặc bản sao trích lục
+      </p>
+      <h5>LƯU Ý THỜI GIAN LÀM THỦ TỤC BAY</h5>
+      <p>
+        Quý khách nên có mặt tối thiểu trước 120 phút so với giờ khởi hành đối
+        với chuyến bay nội địa. Có mặt trước 180 phút nếu bay đi quốc tế.
+      </p>
+    </main>
+
+    <hr style="height: 10px" />
+
+    <footer>
+      <div class="dieu-kien">
+        <a class="nav-link text-" href="#"
+          ><img
+            width="26"
+            height="26"
+            src="https://img.icons8.com/metro/26/airport.png"
+            alt="airport"
+          /><span>Các điều kiện</span></a
+        >
+        <p>Các điều khoản và điều kiện</p>
+        <p>Thanh toán và giao nhân</p>
+        <p>Chính sách bảo mật</p>
+        <p>Chính sách đổi và hoàn vé</p>
+      </div>
+      <div class="dich-vu">
+        <a class="nav-link" href="#"
+          ><img
+            width="26"
+            height="26"
+            src="https://img.icons8.com/metro/26/airport.png"
+            alt="airport"
+          /><span>Các điều kiện</span></a
+        >
+        <p>Dịch vụ trên chuyến bay</p>
+        <p>Hàng hóa</p>
+        <p>Khách hàng công ty</p>
+        <p>Dịch vụ hành lý</p>
+      </div>
+      <div class="thong-tin">
+        <a class="nav-link" href="#"
+          ><img
+            width="26"
+            height="26"
+            src="https://img.icons8.com/metro/26/airport.png"
+            alt="airport"
+          /><span>Các điều kiện</span></a
+        >
+        <p>Hướng dẫn đặt chỗ</p>
+        <p>Quản lý đặt chỗ</p>
+        <p>Kênh thanh toán</p>
+        <p>Giới Thiệu</p>
+      </div>
+
+      <div class="item-picture">
+        <div>
+          <img
+            class="img1"
+            src="https://vietjetairs.com.vn/userupload/hinhanh/download_app.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="img2"
+            src="https://vietjetairs.com.vn/userupload/hinhanh/creditcards.png"
+            alt=""
+          />
+          <img
+            class="img2"
+            src="https://vietjetairs.com.vn/userupload/hinhanh/dathongbao.png"
+            alt=""
+          />
+        </div>
+      </div>

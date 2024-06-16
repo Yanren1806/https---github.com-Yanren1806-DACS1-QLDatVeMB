@@ -3,6 +3,7 @@ const sitesRouter = require('./site');
 const coursesRouter = require('./course');
 const SiteControler = require("../app/controllers/SiteControler");
 const newsControler = require("../app/controllers/NewsController");
+const coursesControler = require("../app/controllers/CourseControllers");
 
 function route(app) {
 

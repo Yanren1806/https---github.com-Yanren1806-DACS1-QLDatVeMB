@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Course = require('../controllers/model/Course');
-const {multipleMongooseToObjects} = require("../../util/mongooes")
+const { multipleMongooseToObjects } = require("../../util/mongooes")
 
 class SiteController {
 
@@ -16,6 +16,12 @@ class SiteController {
             next(error); // Chuyển lỗi đến middleware error handling (nếu có)
         }
     }
+
+        show(req, res) {
+        res.send('news detail!!');
+    }
+
+
     
 }
 
