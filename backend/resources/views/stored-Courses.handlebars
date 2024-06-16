@@ -70,7 +70,7 @@
       // Xử lý sự kiện khi nút xóa được nhấn
       btnDeleteCourse.onclick = function () {
         // Thiết lập hành động của form để gửi yêu cầu DELETE
-        deleteForm.action = `http://localhost:3000/ticket/${courseId}?_method=DELETE`;
+        deleteForm.action = `http://localhost:3000/ticket/${courseId}/?_method=DELETE`;
         deleteForm.method = 'POST'; // Sử dụng phương thức POST để gửi yêu cầu xóa
 
         // Gửi form để xóa khóa học
