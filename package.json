@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yanren1806/DACoSo-master.git"
+    "url": "git+https://github.com/Yanren1806/DACS1-QLDatVeMB.git"
   },
   "author": "NhanDuong",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yanren1806/DACoSo-master/issues"
+    "url": "https://github.com/Yanren1806/DACS1-QLDatVeMB/issues"
   },
-  "homepage": "https://github.com/Yanren1806/DACoSo-master#readme",
+  "homepage": "https://github.com/Yanren1806/DACS1-QLDatVeMB#readme",
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
