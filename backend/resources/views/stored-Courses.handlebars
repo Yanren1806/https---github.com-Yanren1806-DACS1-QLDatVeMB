@@ -5,13 +5,14 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Tuyen bay</th>
-      <th scope="col">chuyen bay</th>
-      <th scope="col">gia</th>
-      <th scope="col">ngay dang</th>
+      <th scope="col">Chuyen bay</th>
+      <th scope="col">Gia</th>
+      <th scope="col">Ngay dang</th>
+      <th scope="col">Hanh dong</th>
     </tr>
   </thead>
-  {{#each courses}}
   <tbody>
+    {{#each courses}}
     <tr>
       <th scope="row">{{sum @index 1}}</th>
       <td>{{this.noixp}} - {{this.noihc}}</td>
@@ -19,10 +20,64 @@
       <td>{{this.giave}}</td>
       <td>{{this.createdAt}}</td>
       <td>
-        <button href="" class="btn btn-link">sua</button>
-      <button href="" class="btn btn-link">xoa</button>
+        <button class="btn btn-link">Sua</button>
+        <button class="btn btn-link" data-bs-toggle="modal" data-id="{{this._id}}" data-bs-target="#delete-course-modal">Xoa</button>
       </td>
     </tr>
+    {{/each}}
   </tbody>
-  {{/each}}
 </table>
+
+<!-- Delete Modal -->
+<div id="delete-course-modal" class="modal fade" tabindex="-1" aria-labelledby="deleteCourseModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteCourseModalLabel">Xac nhan xoa chuyen bay</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Ban co chac chan muon xoa chuyen bay nay?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Dong</button>
+        <button id="btn-delete-course" type="button" class="btn btn-danger">Xoa</button>
+      </div>
+    </div>
+  </div>
+</div>
+<form name="delete-course-form" method="post"></form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let courseId; // Biến courseId để lưu trữ id của khóa học cần xóa
+
+    // Lấy ra form và nút xóa từ DOM
+    var deleteForm = document.forms['delete-course-form'];
+    const btnDeleteCourse = document.getElementById('btn-delete-course');
+
+    // Lấy ra modal xóa từ DOM
+    const exampleModal = document.getElementById('delete-course-modal');
+
+    // Nếu modal tồn tại
+    if (exampleModal) {
+      // Lắng nghe sự kiện hiển thị modal
+      exampleModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget;
+        courseId = button.getAttribute('data-id'); // Lấy giá trị data-id từ nút kích hoạt modal
+      });
+
+      // Xử lý sự kiện khi nút xóa được nhấn
+      btnDeleteCourse.onclick = function () {
+        // Thiết lập hành động của form để gửi yêu cầu DELETE
+        deleteForm.action = `http://localhost:3000/ticket/${courseId}?_method=DELETE`;
+        deleteForm.method = 'POST'; // Sử dụng phương thức POST để gửi yêu cầu xóa
+
+        // Gửi form để xóa khóa học
+        deleteForm.submit();
+      }
+    }
+  });
+</script>
+
+
